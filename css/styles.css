@@ -21,7 +21,7 @@ Section Styles
   margin: 0px;
   padding: 0px 0px 20px 0px;
 }
-.portfolio-title, .contact-text {
+.portfolio-title, .contact-title {
   padding: 50px 0px 35px 0px;
   margin: 0px 0px 0px 0px;
   color: black;
@@ -48,7 +48,7 @@ Section Styles
   text-emphasis: light;
   font-size: 1.2em;
 }
-.project-text {
+.project-text, .contact-text {
   margin: 0px 0px 20px 0px;
   font-family: 'Open Sans', sans-serif;
   padding: 0px 10px 0px 10px;
@@ -146,22 +146,78 @@ Section Styles
     line-height: 30px;
   }
   .line-break {
-    text-decoration-color: red;
     margin: 20px;
+    color: red;
   }
 
   /* Styles for larger screens */
 @media screen and (min-width: 768px) {
-  
+    .nav {
+      display: inline-flex;
+      justify-content: space-around;
+      align-content: center;
+      padding-bottom: 20px;
+    }
+    .main-nav {
+      padding: 20px;
+    }
+    li {
+      background-color: transparent;
+      margin: 0px 20px 0px 20px;
+    }
+    .profile-image {
+      padding: 10px;
+      margin: 5px;
+      width: 300px;
+      height: 200px;
+    }
+    .profile-container {
+      text-align: right;
+      margin: 0%;
+      float: right;
+    }
+    .introduction {
+      text-align: left;
+      margin: 0px 5px 10px 10px;
+      padding:20px 10px 100px 20px;
+      font-size: 1.5em;
+      align-self: auto;
+    }
+    .wrapper {
+      clear: both;
+      width: 788px;
+      float: left;
+    }  
+    .project {
+      width: 375px;
+      float: left;
+      margin: 0px 0px 40px 0px;
+    }
+    .contact-title {
+      margin: 30px;
+      padding: 0px;
+      display: inline-flex;
+    }
+    .contact-text {
+      margin: 0px;
+      padding: 20px 115px 20px 115px;
+      text-align: center;
+      font-size: 1.25em;
+    }
+}
+
+
+  /* 
   .flex {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
+      display: -ms-flexbox;      /* TWEENER - IE 10 
       display: flex; 
       max-width: 1200px;
       justify-content: space-around;
       margin: 0 auto;
   }
+   
   .main-div1 {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
+      display: -ms-flexbox;      /* TWEENER - IE 10 
       display: flex;
       max-width: 1200px;
       justify-content: space-around;
@@ -180,11 +236,6 @@ Section Styles
   .contactPage {
     min-height: 325px;
   }
-  .nav {
-    max-width: 1200px;
-    padding: 0 30px;
-  }
-
   main {
     padding-top: 20px;
   }
@@ -200,3 +251,4 @@ Section Styles
   }
 }
   
+ */
