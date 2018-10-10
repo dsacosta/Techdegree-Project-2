@@ -10,7 +10,6 @@ body {
     color: #222;
     background: #f5f5f5;
   }
-
 /************ 
 Section Styles 
 ***********/
@@ -20,7 +19,9 @@ Section Styles
 .project {
   margin: 0px;
   padding: 0px 0px 20px 0px;
+  display: inline;
 }
+
 .portfolio-title, .contact-title {
   padding: 50px 0px 35px 0px;
   margin: 0px 0px 0px 0px;
@@ -34,7 +35,7 @@ Section Styles
   background: white;
 }
 .project-image{
-  margin: 0px;
+  margin: 5%;
   padding: 0px;
   align-content: center;
   width: 280px;
@@ -49,15 +50,16 @@ Section Styles
   font-size: 1.2em;
 }
 .project-text, .contact-text {
-  margin: 0px 0px 20px 0px;
+  margin: 5%;
   font-family: 'Open Sans', sans-serif;
-  padding: 0px 10px 0px 10px;
-
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center;
+  max-width: 309px;
+  display: inline-block;
+  position: center;
 }
 .main-nav {
-    /* width: 100%; */
-    /* background: white; */
-    /* min-height: 30px; */
     padding: 3px 1px;
     position: center;
     text-align: center;
@@ -75,6 +77,7 @@ Section Styles
     padding: 5px;
     color: black;
     width: 300px;
+    text-align: center;
   }
  .name {
     margin: 20px 0px 0px 0px;
@@ -90,19 +93,22 @@ Section Styles
     /* margin-top: 30px; */
     width: 200px;
     height: 125px;
+    display: inline-block;
   }
-  .profile-container {
+  /* .profile-container {
     margin: 20px;
     padding: 0px;
     align-content: center;
-  }
+  } */
   .introduction {
     text-align: center;
     padding: 10px 20px 35px 20px;
-    margin: 0px;
+    margin: 10px;
+    max-width: 500px;
+    display: inline-block;
   }
   .contact-info {
-    display: inline-table;
+    display: block;
     align-content: center;
     line-height: 10px;
     margin: 2px 0px 50px 0px;
@@ -146,8 +152,11 @@ Section Styles
     line-height: 30px;
   }
   .line-break {
-    margin: 20px;
+    margin: 10px;
     color: red;
+  }
+  .footer-nav {
+    display: none;
   }
 
   /* Styles for larger screens */
@@ -161,15 +170,21 @@ Section Styles
     .main-nav {
       padding: 20px;
     }
-    li {
-      background-color: transparent;
-      margin: 0px 20px 0px 20px;
+    .col {
+      display: inline-block;
+      width: 50%;
     }
     .profile-image {
       padding: 10px;
       margin: 5px;
       width: 300px;
       height: 200px;
+      float: right;
+    }
+    .header-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px;
     }
     .profile-container {
       text-align: right;
@@ -182,73 +197,109 @@ Section Styles
       padding:20px 10px 100px 20px;
       font-size: 1.5em;
       align-self: auto;
+      float: left;
     }
     .wrapper {
-      clear: both;
-      width: 788px;
-      float: left;
+      max-width: 100%;
+      margin: 10px;
+      padding: 10px;
+      align-content: center;
+
     }  
-    .project {
-      width: 375px;
+    body {
+      background: white;
+    }
+    .portfolio-title {
+      padding: 0px;
+      max-height: 100px;
+      vertical-align: middle;
+      text-align: center;
+      padding: 20px;
+    }
+    .p1, .p3, .p5{
+      /* max-width: 50%; */
+      margin: 0px;
       float: left;
-      margin: 0px 0px 40px 0px;
+      max-height: 500px;
+      align-content: right;
+      justify-content: right;
+    }
+    .p2, .p4, .p6 {
+      /* width: 50%; */
+      margin: 0px auto;
+      float: right;
+      max-height: 500px;
+      align-content: right;
+    }
+    .project {
+      align-items: center;
+      margin-right: -4px;
+      width: 50%;
+    }
+    .contact-section {
+      align-content: center;
+      display: inline-block;
     }
     .contact-title {
       margin: 30px;
-      padding: 0px;
-      display: inline-flex;
+      padding: 10px;
+      display: block;
     }
     .contact-text {
-      margin: 0px;
-      padding: 20px 115px 20px 115px;
+      margin: 0 auto;
+      padding: 20px;
       text-align: center;
       font-size: 1.25em;
+      max-width: 555px;
+      align-content: center;
+      display: inline-block;
     }
-}
+    .footer-link {
+      display: none;
+    }
+    .footer-container {
+      vertical-align: top;
+      margin: 0px auto;
+      padding: 0px;
+    }
+    .footer-name {
+      justify-content: left;
+      margin: 20px;
+      padding-left: 10px;
+      padding: 10px;
+      align-content: left;
+      text-align: left;
+      padding-top: 0px;
+      font-weight: bold;
+    }
+   .footer-nav li {
+      margin-right: 0px auto;
+      padding: 10px;
+      vertical-align: top;
+      text-transform: uppercase;
+      font-weight: bold;
+      background-color: transparent;
+      align-content: right;
+      list-style-type: none;
+    }
+    .footer-nav {
+      padding:-right: 20px;
+      display: inline-flex;
+      /* margin-left: -50px; */
+      align-content: right;
+      position: absolute;
+      margin-right: -50px;
+      margin-top: 0px;
+    }
+    .project-text {
+      max-width: 300px;
+      margin: 20px;
+      padding: 20px;
+      display: inline-flex;
+    }   
+  }
+
+  @media screen and (min-width: 1024px) {
 
 
-  /* 
-  .flex {
-      display: -ms-flexbox;      /* TWEENER - IE 10 
-      display: flex; 
-      max-width: 1200px;
-      justify-content: space-around;
-      margin: 0 auto;
   }
-   
-  .main-div1 {
-      display: -ms-flexbox;      /* TWEENER - IE 10 
-      display: flex;
-      max-width: 1200px;
-      justify-content: space-around;
-      margin: 0 auto;   
-  }
-  .main-div2 {
-    display: -ms-flexbox;      
-    display: flex;
-    max-width: 1200px;
-    justify-content: space-around;
-    margin: 0 auto;   
-}
-  header {
-    min-height: 400px;
-  }
-  .contactPage {
-    min-height: 325px;
-  }
-  main {
-    padding-top: 20px;
-  }
-
-  main p {
-    line-height: 1.6em;
-  }
-
-  footer {
-    font-size: 1.3em;
-    max-width: 1200px;
-    margin: 40px auto;
-  }
-}
-  
- */
