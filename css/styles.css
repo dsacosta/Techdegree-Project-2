@@ -3,7 +3,7 @@ Global Layout
 ***********/
 
 body {
-    margin: 4px 0;
+    margin: 0px;
     padding: 0;
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -14,15 +14,15 @@ body {
 Section Styles 
 ***********/
 .wrapper {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 10px 0px;
+  padding-bottom: 50px;
 }
 .project {
   margin: 0px;
   padding: 0px 0px 20px 0px;
   display: inline;
 }
-
-.portfolio-title, .contact-title {
+.portfolio-title {
   padding: 50px 0px 35px 0px;
   margin: 0px 0px 0px 0px;
   color: black;
@@ -31,34 +31,55 @@ Section Styles
   text-transform: uppercase;
   font-size: 1.1em;
 }
+.contact-title {
+  text-align: center;
+  font-family: Roboto, serif;
+  text-transform: uppercase;
+  font-size: 1em;
+  padding-top: 40px;
+}
 .portfolio-title, .project, .wrapper {
   background: white;
 }
+.header-container {
+  display: inline-block;
+}
 .project-image{
-  margin: 5%;
+  margin: 5% 2% 4% 2%;
   padding: 0px;
   align-content: center;
-  width: 280px;
+  width: 290px;
   height: 175px;
 }
 .project-title {
-  margin: 20px 0px 10px 0px;
+  margin: 10px 0px 10px 0px;
   color: black;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   text-emphasis: light;
-  font-size: 1.2em;
 }
-.project-text, .contact-text {
-  margin: 5%;
+.project-text {
+  margin: 2% 10% 5% 10%;
   font-family: 'Open Sans', sans-serif;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 0px;
   text-align: center;
   max-width: 309px;
   display: inline-block;
   position: center;
+  font-size: .875em;
+  /* font-weight: 100; */
 }
+.contact-text {
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 0px 10px;
+  text-align: center;
+  max-width: 309px;
+  display: inline-block;
+  position: center;
+  font-size: 1em;
+  color: rgb(136, 135, 135);
+}
+
 .main-nav {
     padding: 3px 1px;
     position: center;
@@ -66,8 +87,7 @@ Section Styles
   }
   .nav {
     display: inline-block;
-    /* justify-content: space-around; */
-    font-weight: 700;
+    font-weight: 500;
     list-style-type: none;
     padding: 10px;
     margin: 1px 5px 0px 5px;
@@ -84,48 +104,55 @@ Section Styles
     color: black;
     text-align: center;
     font-family: Roboto, serif;
-    /* padding: 10px; */
+    font-size: 1.875em;
   }
   .nav a:hover {
     color: gray;
   }
   .profile-image {
-    /* margin-top: 30px; */
+    margin: 10px 60px;
     width: 200px;
-    height: 125px;
-    display: inline-block;
+    height: 125px; 
   }
-  /* .profile-container {
-    margin: 20px;
-    padding: 0px;
-    align-content: center;
-  } */
   .introduction {
     text-align: center;
-    padding: 10px 20px 35px 20px;
+    padding: 10px 10px 35px 10px;
     margin: 10px;
-    max-width: 500px;
-    display: inline-block;
+    max-width: 300px;
+    /* display: inline-block; */
+    color: rgb(136, 135, 135);
+    font-weight: 200;
+    line-height: 1.5;
   }
   .contact-info {
     display: block;
     align-content: center;
     line-height: 10px;
     margin: 2px 0px 50px 0px;
+    font-size: 1em;
+    color: rgb(136, 135, 135);
   }
   .phone {
     margin-right: 10px;
     display: inline-block;
+    color: rgb(136, 135, 135);
   }
   .phone-number {
     font-weight: bold;
+    color: rgb(136, 135, 135);
   }
-  .contact-phone, .contact-email{
+  /* .contact-phone, .contact-email{
     font-weight: bold;
+    color: rgb(136, 135, 135);
+  } */
+  .email {
+    margin: 0px 10px;
+    color: rgb(136, 135, 135);
   }
   .footer-name {
     float: left;
     margin: 0px;
+    font-weight: bold;
   }
   .footer-link {
     float: right;
@@ -139,7 +166,7 @@ Section Styles
     margin: 20px 10px 30px 10px;
     padding: 10px;
   }
-  a:link {
+  a:link, a {
     text-decoration: none;
     color: black;
   }
@@ -150,10 +177,16 @@ Section Styles
     text-align: center;
     padding: 5px 0px 5px 0px;
     line-height: 30px;
+    font-weight: 500;
+    font-size: .85em;
+  }
+  header {
+    background: #f5f5f5;
+    margin: 0px;
+    padding: 0px;
   }
   .line-break {
     margin: 10px;
-    color: red;
   }
   .footer-nav {
     display: none;
@@ -166,9 +199,11 @@ Section Styles
       justify-content: space-around;
       align-content: center;
       padding-bottom: 20px;
+      background-color: transparent;
     }
     .main-nav {
-      padding: 20px;
+      padding: 12px 20px;
+      background-color: transparent;
     }
     .col {
       display: inline-block;
@@ -178,13 +213,15 @@ Section Styles
       padding: 10px;
       margin: 5px;
       width: 300px;
-      height: 200px;
+      height: 175px;
       float: right;
     }
     .header-container {
-      max-width: 800px;
+      /* max-width: 900px; */
       margin: 0 auto;
-      padding: 10px;
+      padding: 10px 0px;
+      display: inline-block;
+      width: 100%;
     }
     .profile-container {
       text-align: right;
@@ -193,11 +230,12 @@ Section Styles
     }
     .introduction {
       text-align: left;
-      margin: 0px 5px 10px 10px;
-      padding:20px 10px 100px 20px;
-      font-size: 1.5em;
-      align-self: auto;
+      margin: 0px 0px 0px 20px;
+      padding:20px 0px 100px 0px;
+      font-size: 1.15em;
+      /* align-self: auto; */
       float: left;
+      max-width: 1000px;
     }
     .wrapper {
       max-width: 100%;
@@ -206,8 +244,14 @@ Section Styles
       align-content: center;
 
     }  
-    body {
-      background: white;
+    header {
+      background: #f5f5f5;
+      margin: 0px;
+      padding: 0px;
+    }
+    li {
+      background-color: transparent;
+      padding: 0px 30px;
     }
     .portfolio-title {
       padding: 0px;
@@ -218,11 +262,11 @@ Section Styles
     }
     .p1, .p3, .p5{
       /* max-width: 50%; */
-      margin: 0px;
+      margin: 0px auto;
+      padding: 0px auto;
       float: left;
       max-height: 500px;
       align-content: right;
-      justify-content: right;
     }
     .p2, .p4, .p6 {
       /* width: 50%; */
@@ -232,10 +276,29 @@ Section Styles
       align-content: right;
     }
     .project {
-      align-items: center;
-      margin-right: -4px;
+      align-items: right;
       width: 50%;
+      padding: 0px;
     }
+    .project-image {
+      width: 100%;
+      max-width: 350px;
+      justify-content: right;
+      margin: 20px 0px;
+      /* padding: 0px auto; */
+    }
+    .project-title{
+      /* max-width: 200px; */
+      margin: 0px auto;
+      padding: 0px;
+      align-content: center;
+    }
+    .project-text {
+      max-width: 300px;
+      margin: 10px 0px;
+      padding: 20px 0px;
+      display: inline-flex;
+    } 
     .contact-section {
       align-content: center;
       display: inline-block;
@@ -255,7 +318,7 @@ Section Styles
       display: inline-block;
     }
     .footer-link {
-      display: none;
+      display: none;-
     }
     .footer-container {
       vertical-align: top;
@@ -291,15 +354,42 @@ Section Styles
       margin-right: -50px;
       margin-top: 0px;
     }
-    .project-text {
-      max-width: 300px;
-      margin: 20px;
-      padding: 20px;
-      display: inline-flex;
-    }   
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }  
   }
 
   @media screen and (min-width: 1024px) {
-
+    .project {
+      align-items: center;
+      width: 33.3%;
+      padding: 10px;
+      margin: 0px;
+      max-width: 300px;
+    }
+    .p1, .p2, .p3{
+      float: left;
+      max-height: 500px;
+      align-content: right;
+    }
+    .p4, .p5, .p6 {
+      float: right;
+      max-height: 500px;
+    }
+    .wrapper {
+      align-content: center;
+      text-align: center;
+      display: inline-block;
+      margin: 0px auto;
+      position: relative;
+      
+    }
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }  
 
   }
